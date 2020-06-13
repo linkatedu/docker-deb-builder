@@ -50,7 +50,8 @@ done
 
 shift $(($OPTIND - 1))
 srcdir=$1
-docker_args="-it "
+#docker_args="-it "
+docker_args=" "
 
 # Check that mandatory parameters are valid
 [[ !    "$outdir"        ]] && fatal "output directory was not given (-o DIR)"
@@ -76,8 +77,7 @@ docker_args+="-e USER=$(id -u) -e GROUP=$(id -g) "
 # for debugging
 docker_args+="--rm "
 
-#cmd="docker run -it $docker_args $image /build-helper.sh"
-cmd="docker run $image /build-helper.sh"
+cmd="docker run -it $docker_args $image /build-helper.sh"
 
 
 echo "Running docker:"
