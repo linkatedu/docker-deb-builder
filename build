@@ -57,7 +57,7 @@ docker_args=" "
 [[ !    "$outdir"        ]] && fatal "output directory was not given (-o DIR)"
 [[ ! -d "$outdir"        ]] && fatal "output directory does not exist: $outdir"
 [[ !    "$srcdir"        ]] && fatal "source directory not given"
-[[ ! -r "$srcdir/debian" ]] && fatal "source direcotry does not contain debian sub directory"
+[[ ! -r "$srcdir/debian" ]] && fatal "source directory does not contain debian sub directory"
 [[ !    "$image"         ]] && fatal "docker image name not given (-i IMAGE)"
 
 # Check that optional parameters are valid
