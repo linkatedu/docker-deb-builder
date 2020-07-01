@@ -45,7 +45,7 @@ pipeline {
     stage('Build Package') {
       agent any
       steps {
-         sh 'sudo ./build -i docker-deb-builder:$BUILD_NUMBER -o packages /var/jenkins_home/workspace/docker-packager-18.04/source'       
+         sh 'sudo ./build -i linkatedu/docker-deb-builder:$BUILD_NUMBER -o packages /var/jenkins_home/workspace/docker-packager-18.04/source'       
          }
 }
     stage('Remove Unused docker image') {
