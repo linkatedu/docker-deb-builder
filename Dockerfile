@@ -9,5 +9,6 @@ RUN set -ex \
                devscripts \
                equivs \
                fakeroot \
+               gcc curl wget git openssh-client ca-certificates  \
     && apt-get clean \
     && rm -rf /tmp/* /var/tmp/*
